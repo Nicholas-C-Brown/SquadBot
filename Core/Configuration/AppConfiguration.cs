@@ -11,7 +11,7 @@ namespace SquadBot.Core.Configuration
             var envConfiguration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
 
             var environment = envConfiguration["ENVIRONMENT"];
-            Console.WriteLine("Starting Environment: " + environment);
+            System.Diagnostics.Trace.WriteLine("Starting Environment: " + environment);
 
             var token = envConfiguration["APP_TOKEN"];
 

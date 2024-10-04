@@ -12,7 +12,7 @@ namespace SquadBot.Core
         static async Task Main(string[] args)
         {
 
-            Console.WriteLine("Starting application");
+            System.Diagnostics.Trace.WriteLine("Starting App");
 
             var serviceProvider = CreateSquadBotServiceProvider();
 
