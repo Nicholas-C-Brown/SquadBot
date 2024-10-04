@@ -10,10 +10,10 @@ namespace SquadBot.Core.Configuration
 
             var envConfiguration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
 
-            var environment = envConfiguration["RUNTIME_ENVIRONMENT"];
+            var environment = envConfiguration["ENVIRONMENT"];
             Console.WriteLine("Starting Environment: " + environment);
 
-            var token = envConfiguration["TOKEN"];
+            var token = envConfiguration["APP_TOKEN"];
 
             return new Settings()
             {
