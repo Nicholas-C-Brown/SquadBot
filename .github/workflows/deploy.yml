@@ -47,11 +47,10 @@ jobs:
         with:
           name: .net-app
 
-      - name: Environment Settings
-        uses: microsoft/variable-substitution@v1
-        env:
-            ENVIRONMENT: ${{env.NAME}}
-            APP_TOKEN: ${{secrets.APP_TOKEN}}
+      - name: Environment
+        run: |
+            echo "ENVIRONMENT=${env.NAME}" >> $GITHUB_ENV
+            echo "APP_TOKEN=${secrets.APP_TOKEN} >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
