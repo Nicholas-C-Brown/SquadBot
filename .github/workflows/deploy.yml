@@ -50,7 +50,7 @@ jobs:
       - name: Environment
         run: |
             echo "ENVIRONMENT=${env.NAME}" >> $GITHUB_ENV
-            echo "APP_TOKEN=${secrets.APP_TOKEN} >> $GITHUB_ENV
+            echo "APP_TOKEN=${secrets.APP_TOKEN}" >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
